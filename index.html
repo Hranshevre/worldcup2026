@@ -68,6 +68,35 @@
                               padding: 20px;
                               border-radius: 10px;
                               font-size: 1.1em;
+                              cursor: pointer;
+                              transition: all 0.3s ease;
+                              border: 2px solid #667eea;
+                }
+                .highlight:hover {
+                              background: #764ba2;
+                              transform: translateY(-5px);
+                              box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+                }
+                .highlight a {
+                              color: white;
+                              text-decoration: none;
+                              display: block;
+                }
+                .highlight-button {
+                              display: inline-block;
+                              background: white;
+                              color: #667eea;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              margin-top: 10px;
+                              font-weight: bold;
+                              cursor: pointer;
+                              border: none;
+                              font-size: 0.9em;
+                }
+                .highlight:hover .highlight-button {
+                              background: #764ba2;
+                              color: white;
                 }
                 @media (max-width: 600px) {
                               .container {
@@ -93,13 +122,15 @@
                 </div>div>
                 
                 <div class="highlights">
-                            <div class="highlight">
-                                            <strong>📅 Schedule</strong><br>
+                            <div class="highlight" onclick="downloadSchedule()">
+                                            <strong>📅 Schedule</strong><br><br>
                                             Check the FIFA_World_Cup_2026.ics file for detailed tournament dates and match schedules.
+                                            <br><button class="highlight-button">Download ICS</button>button>
                             </div>div>
-                            <div class="highlight">
-                                            <strong>🌍 Location</strong><br>
+                            <div class="highlight" onclick="showLocation()">
+                                            <strong>🌍 Location</strong><br><br>
                                             Matches across North America from June to July 2026.
+                                            <br><button class="highlight-button">Learn More</button>button>
                             </div>div>
                 </div>div>
                 
@@ -112,8 +143,21 @@
                 
                 <p style="color: #999; margin-top: 30px; font-size: 0.9em;">Stay tuned for more updates on the FIFA World Cup 2026!</p>
         </div>div>
+  
+      <script>
+                function downloadSchedule() {
+                              alert('Schedule downloaded! Check the FIFA_World_Cup_2026.ics file in the repository.');
+                              // You can also redirect to the file:
+                              // window.location.href = 'FIFA_World_Cup_2026.ics';
+                }
+
+                function showLocation() {
+                              alert('The FIFA World Cup 2026 will be held across three countries:\n\n- Canada\n- Mexico\n- United States\n\nMatches will take place from June to July 2026 across 16 stadiums!');
+                }
+      </script>
   </body>
-</html>html></p></strong></strong></p></h2></h1>
+</html>html>
+      </script></p></strong></strong></p></h2></h1>
   </body>
       </style></title>
   </head>
